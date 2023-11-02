@@ -1,13 +1,4 @@
-import {
-    Alert,
-    Dimensions,
-    KeyboardAvoidingView,
-    ScrollView,
-    StyleSheet,
-    TextInput,
-    useWindowDimensions,
-    View
-} from "react-native";
+import {Alert, KeyboardAvoidingView, ScrollView, StyleSheet, TextInput, useWindowDimensions, View} from "react-native";
 import {useState} from "react";
 
 import PrimaryButton from "../components/ui/PrimaryButton";

@@ -1,4 +1,4 @@
-import {Dimensions, Image, ScrollView, StyleSheet, Text, useWindowDimensions, View} from "react-native";
+import {Image, ScrollView, StyleSheet, Text, useWindowDimensions, View} from "react-native";
 import Title from "../components/ui/Title";
 import Colors from "../constants/Colors";
 import PrimaryButton from "../components/ui/PrimaryButton";
