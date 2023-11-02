@@ -8,6 +8,7 @@ import StartGameScreen from "./screens/StartGameScreen";
 import GameScreen from "./screens/GameScreen";
 import GameOverScreen from "./screens/GameOverScreen";
 import * as SplashScreen from 'expo-splash-screen';
+import {StatusBar} from "expo-status-bar";
 
 export default function App() {
     const [appIsReady, setAppIsReady] = useState(false);
@@ -29,6 +30,7 @@ export default function App() {
                 setAppIsReady(true);
             }
         }
+
         prepareResources();
     }, []);
 
@@ -70,18 +72,21 @@ export default function App() {
     }
 
     return (
-        <LinearGradient style={styles.rootScreen}
-                        colors={[Colors.primary700, Colors.accent500]}>
-            <ImageBackground
-                source={require('./assets/images/background.png')}
-                resizeMode={'cover'}
-                style={styles.rootScreen}
-                imageStyle={styles.backgroundImage}>
-                <SafeAreaView style={styles.rootScreen} onLayout={onLayout}>
-                    {screen}
-                </SafeAreaView>
-            </ImageBackground>
-        </LinearGradient>
+        <>
+            <StatusBar style="light"/>
+            <LinearGradient style={styles.rootScreen}
+                            colors={[Colors.primary700, Colors.accent500]}>
+                <ImageBackground
+                    source={require('./assets/images/background.png')}
+                    resizeMode={'cover'}
+                    style={styles.rootScreen}
+                    imageStyle={styles.backgroundImage}>
+                    <SafeAreaView style={styles.rootScreen} onLayout={onLayout}>
+                        {screen}
+                    </SafeAreaView>
+                </ImageBackground>
+            </LinearGradient>
+        </>
     );
 }
 
